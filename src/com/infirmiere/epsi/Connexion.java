@@ -17,7 +17,8 @@ import org.joda.time.format.DateTimeFormatter;
 import org.joda.time.format.PeriodFormatter;
 import org.joda.time.format.PeriodFormatterBuilder;
 
-
+import com.infirmiere.beans.Utilisateur;
+import com.infirmiere.form.ConnexionForm;
 
 /**
  * Servlet implementation class Connexion
