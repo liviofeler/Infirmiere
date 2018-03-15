@@ -11,6 +11,7 @@
 </head>
 <body>
 	<%
+	
 		int id = 1;
 		ArrayList<Object> patient = new ArrayList<Object>();
 		
