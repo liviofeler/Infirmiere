@@ -21,12 +21,12 @@
 		
 		
 		for( int i = 0; i < count; i++){	
-			out.println("<form>");
+			out.println("<form method='post' action='accueil'>");
 				out.println("<fieldset>");
 					out.println("<label>");
 					out.println("ID : ");
 					out.println("</label>");
-					out.println("<input type='text' name='idpatient' value='" + patient.get(compteur) + "' />");
+					out.println("<input type='text' name='idpatient' value='" + patient.get(compteur) + "' readonly />");
 					compteur++;
 					out.println("<label>");
 					out.println("Nom  : ");
@@ -51,8 +51,10 @@
 					out.println("<label>");
 					out.println("Date : ");
 					out.println("</label>");
-					out.println("<input type='text' name='datepatient' value='" + patient.get(compteur) + "' />");
+					out.println("<input type='date' name='datepatient' value='" + patient.get(compteur) + "' />");
 					compteur++;
+					out.println("<input type='submit' name='modif' value='SUPPRIMER' class='modif'/>");
+					out.println("<input type='submit' name='modif' value='MODIFIER' class='modif'/>");					
 				out.println("</fieldset>");
 			out.println("</form>");
 		}

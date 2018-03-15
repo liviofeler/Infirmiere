@@ -11,7 +11,7 @@ public class AffichageAccueil {
 		Statement state = null;
 		ResultSet result = null;
 		
-		String requetePatient = "Select * from patient where idinfpatient = " + id;
+		String requetePatient = "Select * from patient where idinfpatient = " + id + " and ACTIFPATIENT = 1";
 		ArrayList<Object> Patients = new ArrayList<Object>();
 		
 		try {
@@ -41,7 +41,7 @@ public class AffichageAccueil {
 		Connection conn = ConnexionBDD.MySql();
 		Statement state = null;
 		ResultSet result = null;
-		String requeteCount = "select count(*) as count from patient where idinfpatient =" + id;
+		String requeteCount = "select count(*) as count from patient where idinfpatient =" + id +  " and ACTIFPATIENT = 1";
 		int compteur = 0;
 		
 		try {
