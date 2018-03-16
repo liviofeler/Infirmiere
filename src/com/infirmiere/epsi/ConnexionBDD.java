@@ -1,6 +1,7 @@
 package com.infirmiere.epsi;
 
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 
 public class ConnexionBDD {
@@ -11,7 +12,7 @@ public class ConnexionBDD {
     try {
 
     	String user = "root";
-    	String password = "toor";
+    	String password = "Douggy38";
         String DRIVER = "com.mysql.jdbc.Driver"; 
         String URL = "jdbc:mysql://localhost:3306/Infirmiere?verifyServerCertificate=false&useSSL=true";
         

@@ -5,11 +5,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link type="text/css" rel="stylesheet"  href="Style/css.css"/>
 <title>Accueil Patient</title>
 </head>
 <body>
 	<%
+	
 		int id = 1;
 		ArrayList<Object> patient = new ArrayList<Object>();
 		
@@ -19,12 +21,12 @@
 		
 		
 		for( int i = 0; i < count; i++){	
-			out.println("<form>");
+			out.println("<form method='post' action='accueil'>");
 				out.println("<fieldset>");
 					out.println("<label>");
 					out.println("ID : ");
 					out.println("</label>");
-					out.println("<input type='text' name='idpatient' value='" + patient.get(compteur) + "' />");
+					out.println("<input type='text' name='idpatient' value='" + patient.get(compteur) + "' readonly />");
 					compteur++;
 					out.println("<label>");
 					out.println("Nom  : ");
@@ -49,8 +51,10 @@
 					out.println("<label>");
 					out.println("Date : ");
 					out.println("</label>");
-					out.println("<input type='text' name='datepatient' value='" + patient.get(compteur) + "' />");
+					out.println("<input type='date' name='datepatient' value='" + patient.get(compteur) + "' />");
 					compteur++;
+					out.println("<input type='submit' name='modif' value='SUPPRIMER' class='modif'/>");
+					out.println("<input type='submit' name='modif' value='MODIFIER' class='modif'/>");					
 				out.println("</fieldset>");
 			out.println("</form>");
 		}
