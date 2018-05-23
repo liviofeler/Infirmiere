@@ -1,24 +1,22 @@
 CREATE TABLE infirmiere
 (
-	idInfirmiere INT,
-	nomInfirmiere VARCHAR(38),
-	prenomInfirmiere VARCHAR(38),
-	LOGININF VARCHAR(50) NOT NULL,
-	PASSINF VARCHAR(15) NOT NULL,
-	PRIMARY KEY (IDINF)
+	id INT,
+	idPatientACharge Int,
+	nom VARCHAR(38),
+	prenom VARCHAR(38),
+	PRIMARY KEY (id)
 );
 
 CREATE TABLE patient
 (
-    IDPATIENT INT NOT NULL,
-	NOMPATIENT VARCHAR(38),
-    PRENOMPATIENT VARCHAR(38),
-    INSEEPATIENT VARCHAR(15),
-	PATHOPATIENT VARCHAR(50),
-    DATEPATIENT VARCHAR(11),
-    ACTIFPATIENT BOOLEAN,
-	IDINFPATIENT,
-	PRIMARY KEY (IDPATIENT)
+	idPatient INT ,
+	nom VARCHAR(38),
+    	prenom VARCHAR(38),
+	numSecu VARCHAR(15),
+	Pathologie VARCHAR(50),
+	dateRecenteVisite Date,
+	idInfirmiere int,
+	PRIMARY KEY (id)
 );
 
 CREATE TABLE utilisateur
