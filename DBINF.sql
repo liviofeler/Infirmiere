@@ -4,7 +4,6 @@ CREATE TABLE infirmiere
 	idPatientACharge Int,
 	nom VARCHAR(38),
 	prenom VARCHAR(38)
-	
 );
 
 CREATE TABLE patient
@@ -16,15 +15,13 @@ CREATE TABLE patient
 	Pathologie VARCHAR(50),
 	dateRecenteVisite Date,
 	idInfirmiere INT
-	
 );
 
 CREATE TABLE utilisateur
 (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	loginPatient VARCHAR(40),
-	passwordPatient VARCHAR(40),
-	PRIMARY KEY (idPatient)
+	login VARCHAR(40),
+	password VARCHAR(40)
 );
 	
 	
