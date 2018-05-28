@@ -12,7 +12,7 @@ CREATE TABLE infirmiere
 CREATE TABLE patient
 (
 	id INT PRIMARY KEY AUTO_INCREMENT ,
-	idUtilisateur,
+	idUtilisateur INT,
 	nom VARCHAR(38),
     	prenom VARCHAR(38),
 	numSecu VARCHAR(15),
